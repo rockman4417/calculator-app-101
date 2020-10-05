@@ -2,4 +2,72 @@ body {
   margin: 20% auto;
   width: 50%;
   height: 75%;
+  background: url(background.jpg);
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 0.8fr 2.3fr 0.8fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  gap: 1px 1px;
+  grid-template-areas:
+    ". Header Header ."
+    ". Input Input ."
+    ". Operation Operation ."
+    ". Equals Equals ."
+    ". Res Res ."
+    ". . . .";
+  background: rgb(99, 151, 153);
+}
+
+Header {
+  grid-area: Header;
+  display: flex;
+  justify-content: center;
+  margin-right: 200px;
+}
+.Input {
+  grid-area: Input;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-right: 200px;
+  margin-bottom: 50px;
+}
+.Operation {
+  grid-area: Operation;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-right: 200px;
+
+  height: 80px;
+}
+.Equals {
+  grid-area: Equals;
+  display: flex;
+  justify-content: space-around;
+  margin-right: 200px;
+}
+.Res {
+  grid-area: Res;
+  display: flex;
+  justify-content: center;
+  margin-right: 200px;
+  font-size: xx-large;
+  color: aliceblue;
+  border: 1px solid green;
+}
+
+button {
+  background: crimson;
+  border: none;
+  width: 75px;
+  height: 50px;
+  border-radius: 25%;
+}
+
+label {
+  font-size: x-large;
+  color: aliceblue;
 }
